@@ -1,0 +1,149 @@
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+// Light theme variables
+:root[data-theme="light"] {
+  // Colors
+  --primary-color: hsl(221, 83%, 53%);      // #2563eb
+  --primary-hover: hsl(221, 83%, 48%);      // #1d4ed8
+  --secondary-color: hsl(220, 16%, 36%);    // #4b5563
+  --secondary-hover: hsl(220, 16%, 28%);    // #374151
+  
+  // Background colors
+  --bg-primary: hsl(0, 0%, 100%);           // #ffffff
+  --bg-secondary: hsl(220, 14%, 96%);       // #f3f4f6
+  --bg-tertiary: hsl(220, 13%, 91%);        // #e5e7eb
+  
+  // Text colors
+  --text-primary: hsl(222, 47%, 11%);       // #111827
+  --text-secondary: hsl(220, 16%, 36%);     // #4b5563
+  --text-disabled: hsl(215, 13%, 65%);      // #9ca3af
+  
+  // Border colors
+  --border-color: hsl(220, 13%, 91%);       // #e5e7eb
+  --border-focus: hsl(221, 83%, 53%);       // #2563eb
+  
+  // Panel colors
+  --panel-bg-1: hsl(0, 0%, 100%);          // #ffffff
+  --panel-bg-2: hsl(210, 20%, 98%);        // #f9fafb
+  --panel-bg-3: hsl(220, 14%, 96%);        // #f3f4f6
+  
+  // Status colors
+  --success: hsl(158, 94%, 30%);           // #059669
+  --error: hsl(0, 84%, 51%);               // #dc2626
+  --warning: hsl(35, 92%, 43%);            // #d97706
+  --info: hsl(221, 83%, 53%);              // #2563eb
+}
+
+// Dark theme variables
+:root[data-theme="dark"] {
+  // Colors
+  --primary-color: hsl(217, 91%, 60%);      // #3b82f6
+  --primary-hover: hsl(221, 83%, 53%);      // #2563eb
+  --secondary-color: hsl(220, 9%, 46%);     // #6b7280
+  --secondary-hover: hsl(220, 9%, 35%);     // #4b5563
+  
+  // Background colors
+  --bg-primary: hsl(222, 47%, 11%);         // #111827
+  --bg-secondary: hsl(217, 33%, 17%);       // #1f2937
+  --bg-tertiary: hsl(215, 25%, 27%);        // #374151
+  
+  // Text colors
+  --text-primary: hsl(210, 40%, 98%);       // #f9fafb
+  --text-secondary: hsl(220, 13%, 91%);     // #e5e7eb
+  --text-disabled: hsl(220, 9%, 46%);       // #6b7280
+  
+  // Border colors
+  --border-color: hsl(215, 25%, 27%);       // #374151
+  --border-focus: hsl(217, 91%, 60%);       // #3b82f6
+  
+  // Panel colors
+  --panel-bg-1: hsl(217, 33%, 17%);        // #1f2937
+  --panel-bg-2: hsl(215, 25%, 27%);        // #374151
+  --panel-bg-3: hsl(220, 9%, 35%);         // #4b5563
+  
+  // Status colors
+  --success: hsl(158, 64%, 52%);           // #34d399
+  --error: hsl(0, 84%, 60%);               // #ef4444
+  --warning: hsl(38, 97%, 56%);            // #fbbf24
+  --info: hsl(217, 91%, 60%);              // #3b82f6
+}
+
+// Pastel theme variables
+:root[data-theme="pastel"] {
+  // Colors
+  --primary-color: hsl(355, 100%, 85%);     // #ffb5ba
+  --primary-hover: hsl(355, 100%, 81%);     // #ff9aa2
+  --secondary-color: hsl(250, 100%, 85%);   // #bdb2ff
+  --secondary-hover: hsl(250, 100%, 80%);   // #a79bff
+  
+  // Background colors
+  --bg-primary: hsl(35, 100%, 91%);         // #ffecd1
+  --bg-secondary: hsl(195, 71%, 90%);       // #d4f0f7
+  --bg-tertiary: hsl(100, 60%, 89%);        // #e2f6d3
+  
+  // Text colors
+  --text-primary: hsl(285, 15%, 40%);       // #6b5876
+  --text-secondary: hsl(220, 7%, 56%);      // #858b97
+  --text-disabled: hsl(220, 7%, 73%);       // #b4b8c0
+  
+  // Border colors
+  --border-color: hsl(25, 100%, 85%);       // #ffd3b6
+  --border-focus: hsl(180, 47%, 72%);       // #98d8d8
+  
+  // Panel colors
+  --panel-bg-1: hsl(340, 71%, 97%);        // #fdeff4
+  --panel-bg-2: hsl(200, 100%, 94%);       // #e0f4ff
+  --panel-bg-3: hsl(90, 56%, 85%);         // #dcedc2
+  
+  // Status colors
+  --success: hsl(120, 35%, 80%);           // #b5e6b5
+  --error: hsl(0, 100%, 85%);              // #ffb3b3
+  --warning: hsl(35, 100%, 85%);           // #ffe1b1
+  --info: hsl(205, 100%, 85%);             // #b3e0ff
+}
+
+// Vibrant theme variables
+:root[data-theme="vibrant"] {
+  // Colors
+  --primary-color: hsl(340, 100%, 65%);     // #ff4d8d
+  --primary-hover: hsl(340, 100%, 55%);     // #ff1a75
+  --secondary-color: hsl(200, 100%, 65%);   // #4dc4ff
+  --secondary-hover: hsl(200, 100%, 55%);   // #1ab2ff
+  
+  // Background colors
+  --bg-primary: hsl(0, 0%, 100%);           // #ffffff
+  --bg-secondary: hsl(210, 100%, 97%);      // #f0f8ff
+  --bg-tertiary: hsl(320, 100%, 97%);       // #fff0f8
+  
+  // Text colors
+  --text-primary: hsl(0, 0%, 10%);          // #1a1a1a
+  --text-secondary: hsl(0, 0%, 30%);        // #4d4d4d
+  --text-disabled: hsl(0, 0%, 60%);         // #999999
+  
+  // Border colors
+  --border-color: hsl(30, 100%, 70%);       // #ffb366
+  --border-focus: hsl(120, 100%, 70%);      // #66ff66
+  
+  // Panel colors
+  --panel-bg-1: hsl(48, 100%, 90%);        // #fff5cc
+  --panel-bg-2: hsl(190, 100%, 90%);       // #ccf5ff
+  --panel-bg-3: hsl(300, 100%, 90%);       // #ffccf5
+  
+  // Status colors
+  --success: hsl(120, 100%, 60%);          // #33ff33
+  --error: hsl(0, 100%, 60%);              // #ff3333
+  --warning: hsl(48, 100%, 50%);           // #ffcc00
+  --info: hsl(210, 100%, 60%);             // #3399ff
+}
